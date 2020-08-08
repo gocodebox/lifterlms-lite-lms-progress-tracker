@@ -1,0 +1,21 @@
+.wp-block-llms-lite-lms-progress-tracker {
+
+	// Hide the message paragraph blocks.
+	p.llms-lite-lms-msg--incomplete,
+	p.llms-lite-lms-msg--complete {
+		display: none;
+	}
+
+	// Hide the incomplete button.
+	.wp-block-button.llms-lite-lms-btn--incomplete {
+		display: none;
+	}
+
+	// Display elements when they're enabled via attributes.
+	&.has-incomplete-msg p.llms-lite-lms-msg--incomplete,
+	&.has-complete-msg p.llms-lite-lms-msg--complete,
+	&.has-incomplete-btn .wp-block-button.llms-lite-lms-btn--incomplete {
+		display: block;
+	}
+	
+}

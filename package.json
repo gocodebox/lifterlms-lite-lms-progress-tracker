@@ -1,0 +1,35 @@
+{
+  "name": "lifterlms-lite-lms",
+  "version": "1.0.0-beta.6",
+  "description": "Easily track progress through simple online courses and other types of content on your WordPress website.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gocodebox/lifterlms-lite-lms.git"
+  },
+  "keywords": [
+    "LifterLMS",
+    "WordPress",
+    "LMS"
+  ],
+  "author": "Team LifterLMS <team@lifterlms.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gocodebox/lifterlms-lite-lms/issues"
+  },
+  "homepage": "https://lifterlms.com/",
+  "devDependencies": {
+    "@lifterlms/scripts": "file:/home/thoams/srv/www/llms/htdocs/wp-content/plugins/lifterlms/packages/scripts",
+    "@wordpress/scripts": "^12.1.1"
+  },
+  "scripts": {
+    "build": "npm run build:scripts && npm run build:pot",
+    "build:scripts": "wp-scripts build",
+    "build:pot": "llms-dev pot",
+    "clean": "rm -f assets/js/*.js.map && rm -f assets/css/*.css.map",
+    "format:js": "wp-scripts format-js ./assets/src/js",
+    "lint:js": "wp-scripts lint-js ./assets/src/js",
+    "test": "wp-scripts test-e2e --config tests/e2e/jest.config.js",
+    "test:dev": "npm run test -- --puppeteer-interactive",
+    "start": "wp-scripts start"
+  }
+}
