@@ -1,5 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
+import { select } from '@wordpress/data';
 
 import edit from './editor/edit';
 import save from './editor/save';
@@ -26,6 +27,10 @@ registerBlockType( 'llms-lite-lms/progress-tracker', {
 		allowReset: {
 			type: 'boolean',
 			default: false,
+		},
+		postId: {
+			type: 'integer',
+			default: null,
 		}
 	},
 	multiple: false,

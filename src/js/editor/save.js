@@ -23,19 +23,18 @@ function getBlockClassName( attributes ) {
 
 export default function ( { attributes, innerBlocks } ) {
 
-
 	// Ensure that our "required" classes are not removed by a smart developer
 	if ( innerBlocks.length ) {
 
 		const classes = getClassNames();
 		innerBlocks.forEach( ( innerBlock, index ) => {
 			if ( ! innerBlock.attributes.className.includes( classes[ index ] ) ) {
-				innerBlocks[ index ].attributes.className = innerBlock.attributes.className ? ` ${ classes[ index ] }` : classes[ index ];  
+				innerBlocks[ index ].attributes.className = innerBlock.attributes.className ? ` ${ classes[ index ] }` : classes[ index ];
 			}
 		} );
 
 	}
 
-	return ( <div className={ getBlockClassName( attributes ) }><InnerBlocks.Content /></div> );
+	return ( <div className={ getBlockClassName( attributes ) } data-post-id={ attributes.postId }><InnerBlocks.Content /></div> );
 
 }

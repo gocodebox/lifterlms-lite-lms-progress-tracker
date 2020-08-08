@@ -1,6 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import { InnerBlocks } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
+import { select } from '@wordpress/data';
 
 import Inspector from './inspect';
 import getClassNames from './get-class-names';
@@ -9,7 +10,7 @@ export default function ( { className, attributes, setAttributes } ) {
 
 	const
 		classes = getClassNames(),
-		{ allowReset, incompleteMsg, completeMsg } = attributes, 
+		{ allowReset, incompleteMsg, completeMsg } = attributes,
 		template = [
 			[
 				'core/paragraph',
@@ -18,7 +19,7 @@ export default function ( { className, attributes, setAttributes } ) {
 					placeholder: __( 'Enter a message to display when this item is incomplete.', 'lifterlms' ),
 				}
 			],
-			[	
+			[
 				'core/button',
 				{
 					align: 'center',
@@ -32,8 +33,8 @@ export default function ( { className, attributes, setAttributes } ) {
 					className: classes[2],
 					placeholder: __( 'Enter a message to display when this item is complete.', 'lifterlms' ),
 				}
-			], 
-			[	
+			],
+			[
 				'core/button',
 				{
 					align: 'center',
@@ -54,14 +55,16 @@ export default function ( { className, attributes, setAttributes } ) {
 		className += ' has-complete-msg';
 	}
 
+	setAttributes( {postId: select( 'core/editor' ).getCurrentPostId()} );
+
 	return (
 		<Fragment>
-			<Inspector 
+			<Inspector
 				attributes={ attributes }
 				setAttributes={ setAttributes }
 			/>
 			<div className={ className }>
-				<InnerBlocks 
+				<InnerBlocks
 					template={ template }
 					templateLock="all"
 				/>
