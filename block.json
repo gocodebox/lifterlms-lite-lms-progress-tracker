@@ -1,0 +1,37 @@
+{
+  "name": "llms-lite-lms/progress-tracker",
+  "title": "Lite LMS Progress Tracker by LifterLMS",
+  "category": "widgets",
+  "icon": {
+    "foreground": "#466dd8",
+    "src": "yes-alt"
+  },
+  "description": "A simple way to turn any WordPress post or page into a completable course.",
+  "keywords": [ "course", "membership", "tracking", "progress", "complete", "LifterLMS", "LMS" ],
+  "textdomain": "lifterlms-lite-lms",
+  "attributes": {
+    "completeMsg": {
+      "type": "boolean",
+      "default": true
+    },
+    "incompleteMsg": {
+      "type": "boolean",
+      "default": true
+    },
+    "allowReset": {
+      "type": "boolean",
+      "default": false
+    },
+    "postId": {
+      "type": "integer"
+    }
+  },
+  "supports": {
+    "html": false,
+    "multiple": false
+  },
+  "editorScript": "file:./assets/js/llms-lite-editor.js",
+  "script": "file:./assets/js/llms-lite-client.js",
+  "editorStyle": "file:./assets/js/llms-lite-editor.css",
+  "style": "file:./assets/js/llms-lite-client.css"
+}

@@ -7,43 +7,21 @@
  * @version [version]
  */
 
-import { __ } from '@wordpress/i18n';
-import { registerBlockType } from '@wordpress/blocks';
+// Styles.
+import editor from '../scss/editor.scss'
 
+// Block definition.
+import block from '../../block.json';
+
+// Internal Deps.
 import edit from './editor/edit';
 import save from './editor/save';
 
-import editor from '../scss/editor.scss'
+// External Deps.
+import { registerBlockType } from '@wordpress/blocks';
 
 registerBlockType( 'llms-lite-lms/progress-tracker', {
-	title: __( 'Lite LMS Progress Tracker by LifterLMS', 'lifterlms' ),
-	description: __( 'A simple way to turn any WordPress post or page into a completable course.', 'lifterlms' ),
-	category: 'common',
-	icon: {
-		foreground: '#466dd8',
-		src: 'yes-alt'
-	},
-	supports: {
-		html: false,
-		multiple: false,
-	},
-	attributes: {
-		completeMsg: {
-			type: 'boolean',
-			default: true,
-		},
-		incompleteMsg: {
-			type: 'boolean',
-			default: true,
-		},
-		allowReset: {
-			type: 'boolean',
-			default: false,
-		},
-		postId: {
-			type: 'integer',
-		},
-	},
+	...block,
 	edit,
 	save,
 } );
