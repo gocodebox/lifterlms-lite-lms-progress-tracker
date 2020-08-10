@@ -56,19 +56,15 @@ import client from '../scss/client.scss'
 		loadContent();
 		block.classList.add( 'ready' );
 
-		completeBtn.querySelector( 'a' ).addEventListener( 'click', event => {
-
-			event.preventDefault();
+		completeBtn.querySelector( 'a' ).addEventListener( 'click', () => {
 
 			window.localStorage.setItem( getStorageKey(), Date.now() / 1000 );
-
 			loadContent();
 
 		} );
 
-		incompleteBtn.querySelector( 'a' ).addEventListener( 'click', event => {
+		incompleteBtn.querySelector( 'a' ).addEventListener( 'click', () => {
 
-			event.preventDefault();
 			window.localStorage.removeItem( getStorageKey() );
 			loadContent();
 
