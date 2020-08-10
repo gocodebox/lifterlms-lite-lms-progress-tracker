@@ -54,6 +54,7 @@ import client from '../scss/client.scss'
 	if ( block ) {
 
 		loadContent();
+		block.classList.add( 'ready' );
 
 		completeBtn.querySelector( 'a' ).addEventListener( 'click', event => {
 
@@ -69,7 +70,7 @@ import client from '../scss/client.scss'
 
 			event.preventDefault();
 			window.localStorage.removeItem( getStorageKey() );
-			loadContent();			
+			loadContent();
 
 		} );
 
