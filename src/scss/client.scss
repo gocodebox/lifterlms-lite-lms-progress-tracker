@@ -29,7 +29,7 @@
 		z-index: 2;
 	}
 	&::after {
-		animation: llms-spinning 1.5s linear infinite;
+		animation: llms-lms-lite-spinning 1.5s linear infinite;
 		box-sizing: border-box;
 		border: 4px solid #313131;
 		border-radius: 50%;
@@ -47,12 +47,12 @@
 	&.ready {
 		&::after,
 		&::before {
-			animation: llms-fadeOut 300ms linear forwards;
+			animation: llms-lite-lms-fade-out 300ms linear forwards;
 		}
 	}
 }
 
-@keyframes llms-spinning {
+@keyframes llms-lms-lite-spinning {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -63,7 +63,7 @@
 		transform: rotate(220deg);
 	}
 }
-@keyframes llms-fadeOut {
+@keyframes llms-lite-lms-fade-out {
 	0% {
 		opacity: 1;
 	}

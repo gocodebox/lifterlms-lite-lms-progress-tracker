@@ -54,7 +54,7 @@ import client from '../scss/client.scss'
 	if ( block ) {
 
 		loadContent();
-		block.classList.add('ready');
+		block.classList.add( 'ready' );
 
 		completeBtn.querySelector( 'a' ).addEventListener( 'click', event => {
 
