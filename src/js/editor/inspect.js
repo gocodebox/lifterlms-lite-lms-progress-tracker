@@ -10,17 +10,17 @@ import {
  *
  * @since [version]
  *
+ * @param {Object}   options               Initial block parameters.
  * @param {Object}   options.attributes    Block attributes.
  * @param {Function} options.setAttributes Function used to store block attributes.
- * @return {Object}
+ * @return {Object} Inspector component.
  */
-export default function ( { attributes, setAttributes } ) {
-
+export default function( { attributes, setAttributes } ) {
 	const
 		{
 			incompleteMsg,
 			completeMsg,
-			allowReset
+			allowReset,
 		} = attributes;
 
 	return (
@@ -55,5 +55,4 @@ export default function ( { attributes, setAttributes } ) {
 			</PanelBody>
 		</InspectorControls>
 	);
-
 }

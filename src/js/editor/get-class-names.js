@@ -5,9 +5,9 @@
  *
  * @since [version]
  *
- * @return {string[]}
+ * @return {string[]} List of class names.
  */
-export default function () {
+export default function() {
 	return [
 		'llms-lite-lms-msg--incomplete',
 		'llms-lite-lms-btn--complete',

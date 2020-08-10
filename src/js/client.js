@@ -5,15 +5,14 @@
  * @version [version]
  */
 
-import '../scss/client.scss'
+import '../scss/client.scss';
 
 ( () => {
-
 	const
-		block         = document.querySelector( '.wp-block-llms-lite-lms-progress-tracker' ),
-		completeBtn   = block ? block.querySelector( '.llms-lite-lms-btn--complete' ) : null,
+		block = document.querySelector( '.wp-block-llms-lite-lms-progress-tracker' ),
+		completeBtn = block ? block.querySelector( '.llms-lite-lms-btn--complete' ) : null,
 		incompleteBtn = block ? block.querySelector( '.llms-lite-lms-btn--incomplete' ) : null,
-		completeMsg   = block ? block.querySelector( '.llms-lite-lms-msg--complete' ) : null,
+		completeMsg = block ? block.querySelector( '.llms-lite-lms-msg--complete' ) : null,
 		incompleteMsg = block ? block.querySelector( '.llms-lite-lms-msg--incomplete' ) : null;
 
 	/**
@@ -21,7 +20,7 @@ import '../scss/client.scss'
 	 *
 	 * @since [version]
 	 *
-	 * @return {Integer|null} The WP_Post ID or `null` if none found.
+	 * @return {number|null} The WP_Post ID or `null` if none found.
 	 */
 	function getPostId() {
 		return block ? block.dataset.postId : null;
@@ -44,36 +43,29 @@ import '../scss/client.scss'
 	 *
 	 * @since [version]
 	 *
-	 * @return {Boolean}
+	 * @return {boolean} Whether or not the content has been completed.
 	 */
 	function isComplete() {
 		return window.localStorage.getItem( getStorageKey() ) ? true : false;
 	}
 
 	function loadContent() {
-
 		if ( isComplete() ) {
-
 			incompleteMsg.style.display = 'none';
 			completeBtn.style.display = 'none';
 
 			completeMsg.style.display = null;
 			incompleteBtn.style.display = null;
-
 		} else {
-
 			incompleteMsg.style.display = null;
 			completeBtn.style.display = null;
 
 			completeMsg.style.display = 'none';
 			incompleteBtn.style.display = 'none';
-
 		}
-
 	}
 
 	if ( block ) {
-
 		loadContent();
 		block.classList.add( 'ready' );
 
@@ -85,13 +77,11 @@ import '../scss/client.scss'
 		 *
 		 * @since [version]
 		 *
-		 * @return {Void}
+		 * @return {void}
 		 */
 		completeBtn.querySelector( 'a' ).addEventListener( 'click', () => {
-
 			window.localStorage.setItem( getStorageKey(), Date.now() / 1000 );
 			loadContent();
-
 		} );
 
 		/**
@@ -102,15 +92,11 @@ import '../scss/client.scss'
 		 *
 		 * @since [version]
 		 *
-		 * @return {Void}
+		 * @return {void}
 		 */
 		incompleteBtn.querySelector( 'a' ).addEventListener( 'click', () => {
-
 			window.localStorage.removeItem( getStorageKey() );
 			loadContent();
-
 		} );
-
 	}
-
 } )();

@@ -11,7 +11,6 @@ import getClassNames from './get-class-names';
  * @return {string} Classname list.
  */
 function getBlockClassName( attributes ) {
-
 	const { allowReset, incompleteMsg, completeMsg } = attributes;
 
 	const classNames = [];
@@ -26,7 +25,6 @@ function getBlockClassName( attributes ) {
 	}
 
 	return classNames.join( ' ' );
-
 }
 
 /**
@@ -39,20 +37,16 @@ function getBlockClassName( attributes ) {
  * @param {Object[]} options.innerBlocks Array of child block objects.
  * @return {string} HTML string to save to the post content.
  */
-export default function ( { attributes, innerBlocks } ) {
-
+export default function( { attributes, innerBlocks } ) {
 	// Ensure that our "required" classes are not removed by a smart developer
 	if ( innerBlocks.length ) {
-
 		const classes = getClassNames();
 		innerBlocks.forEach( ( innerBlock, index ) => {
 			if ( ! innerBlock.attributes.className.includes( classes[ index ] ) ) {
 				innerBlocks[ index ].attributes.className = innerBlock.attributes.className ? ` ${ classes[ index ] }` : classes[ index ];
 			}
 		} );
-
 	}
 
 	return ( <div className={ getBlockClassName( attributes ) } data-post-id={ attributes.postId }><InnerBlocks.Content /></div> );
-
 }

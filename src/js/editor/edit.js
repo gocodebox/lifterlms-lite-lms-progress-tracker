@@ -11,13 +11,13 @@ import getClassNames from './get-class-names';
  *
  * @since [version]
  *
+ * @param {Object}   options               Initial block parameters.
  * @param {string}   options.className     Block CSS classname.
  * @param {Object}   options.attributes    Block attributes.
  * @param {Function} options.setAttributes Function used to set block attributes.
- * @return {Object}
+ * @return {Object} The edit component.
  */
-export default function ( { className, attributes, setAttributes } ) {
-
+export default function( { className, attributes, setAttributes } ) {
 	const
 		classes = getClassNames(),
 		{ allowReset, incompleteMsg, completeMsg } = attributes,
@@ -25,30 +25,30 @@ export default function ( { className, attributes, setAttributes } ) {
 			[
 				'core/paragraph',
 				{
-					className: classes[0],
+					className: classes[ 0 ],
 					placeholder: __( 'Enter a message to display when this item is incomplete.', 'lifterlms' ),
-				}
+				},
 			],
 			[
 				'core/button',
 				{
 					align: 'center',
-					className: classes[1],
+					className: classes[ 1 ],
 					text: __( 'Mark Complete', 'lifterlms-lite-lms' ),
 				},
 			],
 			[
 				'core/paragraph',
 				{
-					className: classes[2],
+					className: classes[ 2 ],
 					placeholder: __( 'Enter a message to display when this item is complete.', 'lifterlms' ),
-				}
+				},
 			],
 			[
 				'core/button',
 				{
 					align: 'center',
-					className: `${ classes[3] } is-style-outline`,
+					className: `${ classes[ 3 ] } is-style-outline`,
 					text: __( 'Mark Incomplete', 'lifterlms-lite-lms' ),
 				},
 			],
@@ -84,5 +84,4 @@ export default function ( { className, attributes, setAttributes } ) {
 			</div>
 		</Fragment>
 	);
-
 }
