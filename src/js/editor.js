@@ -1,6 +1,5 @@
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
-import { select } from '@wordpress/data';
 
 import edit from './editor/edit';
 import save from './editor/save';
