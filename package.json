@@ -18,7 +18,7 @@
   },
   "homepage": "https://lifterlms.com/",
   "devDependencies": {
-    "@lifterlms/scripts": "file:/home/thoams/srv/www/llms/htdocs/wp-content/plugins/lifterlms/packages/scripts",
+    "@lifterlms/scripts": "^1.2.3",
     "@wordpress/scripts": "^12.1.1"
   },
   "scripts": {
