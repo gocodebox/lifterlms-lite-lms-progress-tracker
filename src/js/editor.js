@@ -30,8 +30,7 @@ registerBlockType( 'llms-lite-lms/progress-tracker', {
 		},
 		postId: {
 			type: 'integer',
-			default: null,
-		}
+		},
 	},
 	multiple: false,
 	edit,

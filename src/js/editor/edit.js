@@ -55,7 +55,10 @@ export default function ( { className, attributes, setAttributes } ) {
 		className += ' has-complete-msg';
 	}
 
-	setAttributes( {postId: select( 'core/editor' ).getCurrentPostId()} );
+	const postId = select( 'core/editor' ).getCurrentPostId();
+	if ( postId && ( ! attributes.postId || attributes.postId !== postId ) ) {
+		setAttributes( { postId } );
+	}
 
 	return (
 		<Fragment>
