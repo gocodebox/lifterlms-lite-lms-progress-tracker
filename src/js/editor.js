@@ -23,8 +23,8 @@ const { icon } = block;
 registerBlockType( 'llms-lite-lms/progress-tracker', {
 	...block,
 	icon: {
-    	foreground: '#466dd8',
-    	src: icon,
+		foreground: '#466dd8',
+		src: icon,
 	},
 	edit,
 	save,
