@@ -7,7 +7,7 @@
  * @since [version]
  * @version [version]
  *
- * Plugin Name: Lite LMS by LifterLMS
+ * Plugin Name: Lite LMS Progress Tracker by LifterLMS
  * Plugin URI: https://lifterlms.com/
  * Description: Easily track progress through simple online courses and other types of public or membership-protected content on your WordPress website.
  * Version: [version]
