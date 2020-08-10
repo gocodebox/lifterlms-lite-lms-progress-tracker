@@ -18,8 +18,14 @@ import save from './editor/save';
 // External Deps.
 import { registerBlockType } from '@wordpress/blocks';
 
+const { icon } = block;
+
 registerBlockType( 'llms-lite-lms/progress-tracker', {
 	...block,
+	icon: {
+    	foreground: '#466dd8',
+    	src: icon,
+	},
 	edit,
 	save,
 } );

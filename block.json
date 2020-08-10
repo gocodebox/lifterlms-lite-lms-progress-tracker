@@ -2,10 +2,7 @@
   "name": "llms-lite-lms/progress-tracker",
   "title": "Lite LMS Progress Tracker by LifterLMS",
   "category": "widgets",
-  "icon": {
-    "foreground": "#466dd8",
-    "src": "yes-alt"
-  },
+  "icon": "yes-alt",
   "description": "A simple way to turn any WordPress post or page into a completable course.",
   "keywords": [ "course", "membership", "tracking", "progress", "complete", "LifterLMS", "LMS" ],
   "textdomain": "lifterlms-lite-lms",
