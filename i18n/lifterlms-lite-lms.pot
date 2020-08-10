@@ -1,4 +1,4 @@
-# Copyright (C) -2020 LifterLMS
+# Copyright (C) 2020 LifterLMS
 # This file is distributed under the same license as the Lite LMS by LifterLMS plugin.
 msgid ""
 msgstr ""
@@ -9,8 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-08-07T12:00:56-07:00\n"
+"POT-Creation-Date: 2020-08-10T09:45:40-07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
 "X-Generator: llms-dev 1.0.0\n"
 "X-Domain: lifterlms-lite-lms\n"
 
@@ -24,7 +25,7 @@ msgid "https://lifterlms.com/"
 msgstr ""
 
 #. Description of the plugin
-msgid "Easily track progress through simple online courses and other types of content on your WordPress website."
+msgid "Easily track progress through simple online courses and other types of public or membership-protected content on your WordPress website."
 msgstr ""
 
 #. Author of the plugin
