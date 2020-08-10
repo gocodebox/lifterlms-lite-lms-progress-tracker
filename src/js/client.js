@@ -7,7 +7,7 @@
  * @version [version]
  */
 
-import client from '../scss/client.scss'
+import '../scss/client.scss'
 
 ( () => {
 

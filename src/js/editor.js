@@ -8,7 +8,7 @@
  */
 
 // Styles.
-import editor from '../scss/editor.scss'
+import from '../scss/editor.scss'
 
 // Block definition.
 import block from '../../block.json';
