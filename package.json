@@ -25,9 +25,6 @@
     "build": "npm run build:scripts && npm run build:pot",
     "build:scripts": "wp-scripts build",
     "build:pot": "llms-dev pot",
-    "clean": "rm -f assets/js/*.js.map && rm -f assets/css/*.css.map",
-    "format:js": "wp-scripts format-js ./assets/src/js",
-    "lint:js": "wp-scripts lint-js ./assets/src/js",
     "test": "wp-scripts test-e2e --config tests/e2e/jest.config.js",
     "test:dev": "npm run test -- --puppeteer-interactive",
     "start": "wp-scripts start"
