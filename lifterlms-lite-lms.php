@@ -1,6 +1,6 @@
 <?php
 /**
- * Main LifterLMS Micro Course plugin file
+ * Main plugin file
  *
  * @package LifterLMS_Lite_LMS/Main
  *
