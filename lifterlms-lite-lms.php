@@ -13,7 +13,7 @@
  * Version: [version]
  * Author: LifterLMS
  * Author URI: https://lifterlms.com/
- * Text Domain: lifterlms-lite-lms
+ * Text Domain: llms-lite-progress
  * Domain Path: /languages
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -81,7 +81,7 @@ function llms_lite_lms_scripts() {
 
 	// JS translations.
 	if ( 'editor' === $slug ) {
-		wp_set_script_translations( $handle, 'lifterlms-lite-lms' );
+		wp_set_script_translations( $handle, 'llms-lite-progress' );
 	}
 
 }
@@ -97,8 +97,8 @@ function llms_lite_lms_i18n() {
 
 	$locale = apply_filters( 'plugin_locale', determine_locale(), 'lifterlms' );
 
-	unload_textdomain( 'lifterlms-lite-lms' );
-	load_textdomain( 'lifterlms-lite-lms', WP_LANG_DIR . '/lifterlms/lifterlms-' . $locale . '.mo' );
+	unload_textdomain( 'llms-lite-progress' );
+	load_textdomain( 'llms-lite-progress', WP_LANG_DIR . '/lifterlms/lifterlms-' . $locale . '.mo' );
 	load_plugin_textdomain( 'lifterlms', false, dirname( plugin_basename( __FILE__ ) ) . '/i18n' );
 
 }

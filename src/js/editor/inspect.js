@@ -25,29 +25,29 @@ export default function( { attributes, setAttributes } ) {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'User Messages', 'lifterlms' ) }>
+			<PanelBody title={ __( 'User Messages', 'llms-lite-progress' ) }>
 
 				<ToggleControl
-					label={ __( 'Incomplete message', 'lifterlms' ) }
-					help={ incompleteMsg ? __( 'Show a message when the content is not complete.', 'lifterlms' ) : __( 'No message.', 'lifterlms' ) }
+					label={ __( 'Incomplete message', 'llms-lite-progress' ) }
+					help={ incompleteMsg ? __( 'Show a message when the content is not complete.', 'llms-lite-progress' ) : __( 'No message.', 'llms-lite-progress' ) }
 					checked={ incompleteMsg }
 					onChange={ () => setAttributes( { incompleteMsg: ! incompleteMsg } ) }
 				/>
 
 				<ToggleControl
-					label={ __( 'Completed message', 'lifterlms' ) }
-					help={ completeMsg ? __( 'Show a message when the content has been completed.', 'lifterlms' ) : __( 'No message.', 'lifterlms' ) }
+					label={ __( 'Completed message', 'llms-lite-progress' ) }
+					help={ completeMsg ? __( 'Show a message when the content has been completed.', 'llms-lite-progress' ) : __( 'No message.', 'llms-lite-progress' ) }
 					checked={ completeMsg }
 					onChange={ () => setAttributes( { completeMsg: ! completeMsg } ) }
 				/>
 
 			</PanelBody>
 
-			<PanelBody title={ __( 'User Progress Reset', 'lifterlms' ) }>
+			<PanelBody title={ __( 'User Progress Reset', 'llms-lite-progress' ) }>
 
 				<ToggleControl
-					label={ __( 'Progress Reset', 'lifterlms' ) }
-					help={ allowReset ? __( 'Completed content can be marked incomplete', 'lifterlms' ) : __( 'Completed content cannot be marked incomplete', 'lifterlms' ) }
+					label={ __( 'Progress Reset', 'llms-lite-progress' ) }
+					help={ allowReset ? __( 'Completed content can be marked incomplete', 'llms-lite-progress' ) : __( 'Completed content cannot be marked incomplete', 'llms-lite-progress' ) }
 					checked={ allowReset }
 					onChange={ () => setAttributes( { allowReset: ! allowReset } ) }
 				/>

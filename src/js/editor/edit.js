@@ -26,7 +26,7 @@ export default function( { className, attributes, setAttributes } ) {
 				'core/paragraph',
 				{
 					className: classes[ 0 ],
-					placeholder: __( 'Enter a message to display when this item is incomplete.', 'lifterlms' ),
+					placeholder: __( 'Enter a message to display when this item is incomplete.', 'llms-lite-progress' ),
 				},
 			],
 			[
@@ -34,14 +34,14 @@ export default function( { className, attributes, setAttributes } ) {
 				{
 					align: 'center',
 					className: classes[ 1 ],
-					text: __( 'Mark Complete', 'lifterlms-lite-lms' ),
+					text: __( 'Mark Complete', 'llms-lite-progress' ),
 				},
 			],
 			[
 				'core/paragraph',
 				{
 					className: classes[ 2 ],
-					placeholder: __( 'Enter a message to display when this item is complete.', 'lifterlms' ),
+					placeholder: __( 'Enter a message to display when this item is complete.', 'llms-lite-progress' ),
 				},
 			],
 			[
@@ -49,7 +49,7 @@ export default function( { className, attributes, setAttributes } ) {
 				{
 					align: 'center',
 					className: `${ classes[ 3 ] } is-style-outline`,
-					text: __( 'Mark Incomplete', 'lifterlms-lite-lms' ),
+					text: __( 'Mark Incomplete', 'llms-lite-progress' ),
 				},
 			],
 		];
