@@ -29,9 +29,14 @@ registerBlockType( 'llms-lite-lms/progress-tracker', {
 		allowReset: {
 			type: 'boolean',
 			default: false,
-		}
+		},
+		postId: {
+			type: 'integer',
+		},
 	},
-	multiple: false,
+	supports:{
+		multiple: false,
+	},
 	edit,
 	save,
 } );
