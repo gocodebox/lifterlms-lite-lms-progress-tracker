@@ -32,7 +32,7 @@ import '../scss/client.scss'
 	 *
 	 * @since [version]
 	 *
-	 * @return {String} A unique storage key for the current post.
+	 * @return {string} A unique storage key for the current post.
 	 */
 	function getStorageKey() {
 		const id = getPostId();

@@ -8,7 +8,7 @@ import getClassNames from './get-class-names';
  * @since [version]
  *
  * @param {Object} attributes Block attributes.
- * @return {String}
+ * @return {string}
  */
 function getBlockClassName( attributes ) {
 

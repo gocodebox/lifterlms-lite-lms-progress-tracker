@@ -11,7 +11,7 @@ import getClassNames from './get-class-names';
  *
  * @since [version]
  *
- * @param {String}   options.className     Block CSS classname.
+ * @param {string}   options.className     Block CSS classname.
  * @param {Object}   options.attributes    Block attributes.
  * @param {Function} options.setAttributes Function used to set block attributes.
  * @return {Object}

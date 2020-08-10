@@ -5,7 +5,7 @@
  *
  * @since [version]
  *
- * @return {String[]}
+ * @return {string[]}
  */
 export default function () {
 	return [
