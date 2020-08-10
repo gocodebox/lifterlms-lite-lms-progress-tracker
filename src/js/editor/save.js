@@ -8,7 +8,7 @@ import getClassNames from './get-class-names';
  * @since [version]
  *
  * @param {Object} attributes Block attributes.
- * @return {string}
+ * @return {string} Classname list.
  */
 function getBlockClassName( attributes ) {
 
@@ -34,9 +34,10 @@ function getBlockClassName( attributes ) {
  *
  * @since [version]
  *
+ * @param {Object}   options             Block params.
  * @param {Object}   options.attributes  Block attributes.
  * @param {Object[]} options.innerBlocks Array of child block objects.
- * @return {Void}
+ * @return {string} HTML string to save to the post content.
  */
 export default function ( { attributes, innerBlocks } ) {
 
