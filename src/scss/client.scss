@@ -29,7 +29,7 @@
 		z-index: 2;
 	}
 	&::after {
-		animation: llms-lms-lite-spinning 1.5s linear infinite;
+		animation: llms-lite-lms-spinning 1.5s linear infinite;
 		box-sizing: border-box;
 		border: 4px solid #313131;
 		border-radius: 50%;
@@ -52,7 +52,7 @@
 	}
 }
 
-@keyframes llms-lms-lite-spinning {
+@keyframes llms-lite-lms-spinning {
 	0% {
 		transform: rotate(0deg);
 	}
