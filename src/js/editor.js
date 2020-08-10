@@ -1,3 +1,12 @@
+/**
+ * Main editor script
+ *
+ * @package LifterLMS/LMS_Lite/scripts
+ *
+ * @since [version]
+ * @version [version]
+ */
+
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
 

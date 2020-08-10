@@ -1,3 +1,12 @@
+/**
+ * Return a list of class names used by children blocks
+ *
+ * The index equates to the order of the child block.
+ *
+ * @since [version]
+ *
+ * @return {String[]}
+ */
 export default function () {
 	return [
 		'llms-lite-lms-msg--incomplete',

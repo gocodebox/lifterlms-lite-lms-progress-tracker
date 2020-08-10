@@ -1,3 +1,12 @@
+/**
+ * Main client script
+ *
+ * @package LifterLMS/LMS_Lite/scripts
+ *
+ * @since [version]
+ * @version [version]
+ */
+
 import client from '../scss/client.scss'
 
 ( () => {
@@ -20,11 +29,25 @@ import client from '../scss/client.scss'
 		return block ? block.dataset.postId : null;
 	}
 
+	/**
+	 * Retrieve a key used for storing completion data in localStorage
+	 *
+	 * @since [version]
+	 *
+	 * @return {String} A unique storage key for the current post.
+	 */
 	function getStorageKey() {
 		const id = getPostId();
 		return id ? `llms-lite-lms-${ id }` : null;
 	}
 
+	/**
+	 * Deteremine if the current post has been completed.
+	 *
+	 * @since [version]
+	 *
+	 * @return {Boolean}
+	 */
 	function isComplete() {
 		return window.localStorage.getItem( getStorageKey() ) ? true : false;
 	}
@@ -56,6 +79,16 @@ import client from '../scss/client.scss'
 		loadContent();
 		block.classList.add( 'ready' );
 
+		/**
+		 * Click event for the complete button.
+		 *
+		 * Stores the current timestamp in localStorage and reloads the button
+		 * content based on the new progress state.
+		 *
+		 * @since [version]
+		 *
+		 * @return {Void}
+		 */
 		completeBtn.querySelector( 'a' ).addEventListener( 'click', () => {
 
 			window.localStorage.setItem( getStorageKey(), Date.now() / 1000 );
@@ -63,6 +96,16 @@ import client from '../scss/client.scss'
 
 		} );
 
+		/**
+		 * Click event for the complete button.
+		 *
+		 * Deletes storage data from localStorage and reloads the button
+		 * content based on the new progress state.
+		 *
+		 * @since [version]
+		 *
+		 * @return {Void}
+		 */
 		incompleteBtn.querySelector( 'a' ).addEventListener( 'click', () => {
 
 			window.localStorage.removeItem( getStorageKey() );

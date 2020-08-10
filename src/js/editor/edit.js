@@ -6,6 +6,16 @@ import { select } from '@wordpress/data';
 import Inspector from './inspect';
 import getClassNames from './get-class-names';
 
+/**
+ * Edit function for the block
+ *
+ * @since [version]
+ *
+ * @param {String}   options.className     Block CSS classname.
+ * @param {Object}   options.attributes    Block attributes.
+ * @param {Function} options.setAttributes Function used to set block attributes.
+ * @return {Object}
+ */
 export default function ( { className, attributes, setAttributes } ) {
 
 	const

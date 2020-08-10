@@ -5,10 +5,19 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 
+/**
+ * Inspector controls for use in the block editor
+ *
+ * @since [version]
+ *
+ * @param {Object}   options.attributes    Block attributes.
+ * @param {Function} options.setAttributes Function used to store block attributes.
+ * @return {Object}
+ */
 export default function ( { attributes, setAttributes } ) {
 
 	const
-		{ 
+		{
 			incompleteMsg,
 			completeMsg,
 			allowReset

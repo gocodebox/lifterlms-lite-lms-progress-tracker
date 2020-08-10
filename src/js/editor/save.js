@@ -2,6 +2,14 @@ import { InnerBlocks } from '@wordpress/block-editor';
 
 import getClassNames from './get-class-names';
 
+/**
+ * Retrieve the classname for the bock based on current attributes
+ *
+ * @since [version]
+ *
+ * @param {Object} attributes Block attributes.
+ * @return {String}
+ */
 function getBlockClassName( attributes ) {
 
 	const { allowReset, incompleteMsg, completeMsg } = attributes;
@@ -21,6 +29,15 @@ function getBlockClassName( attributes ) {
 
 }
 
+/**
+ * Save function for the block
+ *
+ * @since [version]
+ *
+ * @param {Object}   options.attributes  Block attributes.
+ * @param {Object[]} options.innerBlocks Array of child block objects.
+ * @return {Void}
+ */
 export default function ( { attributes, innerBlocks } ) {
 
 	// Ensure that our "required" classes are not removed by a smart developer
