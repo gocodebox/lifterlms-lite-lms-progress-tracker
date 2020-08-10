@@ -8,7 +8,7 @@ import {
 /**
  * Inspector controls for use in the block editor
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @param {Object}   options               Initial block parameters.
  * @param {Object}   options.attributes    Block attributes.

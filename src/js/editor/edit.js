@@ -9,7 +9,7 @@ import getClassNames from './get-class-names';
 /**
  * Edit function for the block
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @param {Object}   options               Initial block parameters.
  * @param {string}   options.className     Block CSS classname.

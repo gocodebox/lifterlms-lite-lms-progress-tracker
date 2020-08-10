@@ -1,8 +1,8 @@
 /**
  * Main editor script
  *
- * @since [version]
- * @version [version]
+ * @since 0.0.1
+ * @version 0.0.1
  */
 
 // Styles.

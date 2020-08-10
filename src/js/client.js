@@ -1,8 +1,8 @@
 /**
  * Main client script
  *
- * @since [version]
- * @version [version]
+ * @since 0.0.1
+ * @version 0.0.1
  */
 
 import '../scss/client.scss';
@@ -18,7 +18,7 @@ import '../scss/client.scss';
 	/**
 	 * Retrieves the current WP_Post ID
 	 *
-	 * @since [version]
+	 * @since 0.0.1
 	 *
 	 * @return {number|null} The WP_Post ID or `null` if none found.
 	 */
@@ -29,7 +29,7 @@ import '../scss/client.scss';
 	/**
 	 * Retrieve a key used for storing completion data in localStorage
 	 *
-	 * @since [version]
+	 * @since 0.0.1
 	 *
 	 * @return {string} A unique storage key for the current post.
 	 */
@@ -41,7 +41,7 @@ import '../scss/client.scss';
 	/**
 	 * Deteremine if the current post has been completed.
 	 *
-	 * @since [version]
+	 * @since 0.0.1
 	 *
 	 * @return {boolean} Whether or not the content has been completed.
 	 */
@@ -75,7 +75,7 @@ import '../scss/client.scss';
 		 * Stores the current timestamp in localStorage and reloads the button
 		 * content based on the new progress state.
 		 *
-		 * @since [version]
+		 * @since 0.0.1
 		 *
 		 * @return {void}
 		 */
@@ -90,7 +90,7 @@ import '../scss/client.scss';
 		 * Deletes storage data from localStorage and reloads the button
 		 * content based on the new progress state.
 		 *
-		 * @since [version]
+		 * @since 0.0.1
 		 *
 		 * @return {void}
 		 */

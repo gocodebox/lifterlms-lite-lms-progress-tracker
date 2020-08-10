@@ -4,8 +4,8 @@
  *
  * @package LifterLMS_Lite_LMS/Main
  *
- * @since [version]
- * @version [version]
+ * @since 0.0.1
+ * @version 0.0.1
  *
  * Plugin Name: Lite LMS Progress Tracker by LifterLMS
  * Plugin URI: https://lifterlms.com/
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Initialize
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return void
  */
@@ -51,7 +51,7 @@ add_action( 'init', 'llms_lite_lms' );
 /**
  * Register & Enqueue scripts.
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return void
  */
@@ -89,7 +89,7 @@ function llms_lite_lms_scripts() {
 /**
  * Load textdomain
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return void
  */

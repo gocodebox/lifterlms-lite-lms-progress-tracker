@@ -5,7 +5,7 @@ import getClassNames from './get-class-names';
 /**
  * Retrieve the classname for the bock based on current attributes
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @param {Object} attributes Block attributes.
  * @return {string} Classname list.
@@ -30,7 +30,7 @@ function getBlockClassName( attributes ) {
 /**
  * Save function for the block
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @param {Object}   options             Block params.
  * @param {Object}   options.attributes  Block attributes.
