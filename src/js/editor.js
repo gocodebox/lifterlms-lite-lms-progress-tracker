@@ -16,6 +16,7 @@ registerBlockType( 'llms-lite-lms/progress-tracker', {
 	},
 	supports: {
 		html: false,
+		multiple: false,
 	},
 	attributes: {
 		completeMsg: {
@@ -33,9 +34,6 @@ registerBlockType( 'llms-lite-lms/progress-tracker', {
 		postId: {
 			type: 'integer',
 		},
-	},
-	supports:{
-		multiple: false,
 	},
 	edit,
 	save,
