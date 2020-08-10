@@ -1,0 +1,38 @@
+{
+  "name": "lifterlms/lite-lms",
+  "description": "Lite LMS by LifterLMS WordPress block plugin",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0+",
+  "authors": [
+      {
+          "name": "LifterLMS",
+          "email": "team@lifterlms.com"
+      }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "require-dev": {
+      "lifterlms/lifterlms-cs": "dev-master",
+      "lifterlms/lifterlms-tests": "dev-master"
+  },
+  "scripts": {
+    "check-cs": "\"vendor/bin/phpcs\" --colors",
+    "check-cs-errors": "\"vendor/bin/phpcs\" --colors --error-severity=1 --warning-severity=6",
+    "config-cs": [
+      "\"vendor/bin/phpcs\" --config-set installed_paths ../../../vendor/wp-coding-standards/wpcs,../../../vendor/lifterlms/lifterlms-cs,../../../vendor/phpcompatibility/php-compatibility,../../../vendor/phpcompatibility/phpcompatibility-paragonie,../../../vendor/phpcompatibility/phpcompatibility-wp",
+      "\"vendor/bin/phpcs\" --config-set default_standard 'LifterLMS Core'"
+    ],
+    "env": "vendor/bin/llms-env",
+    "env:setup": [
+      "vendor/bin/llms-env wp plugin activate lifterlms"
+    ],
+    "fix-cs": "\"vendor/bin/phpcbf\"",
+    "post-install-cmd": "composer config-cs",
+    "post-update-cmd": "composer config-cs",
+    "tests-install": [
+      "\"vendor/bin/llms-tests\" teardown llms_tests root password 127.0.0.1",
+      "\"vendor/bin/llms-tests\" install llms_tests root password 127.0.0.1"
+    ],
+    "tests-run": "\"vendor/bin/phpunit\""
+  }
+}
