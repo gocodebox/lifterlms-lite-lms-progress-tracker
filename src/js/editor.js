@@ -14,6 +14,9 @@ registerBlockType( 'llms-lite-lms/progress-tracker', {
 		foreground: '#466dd8',
 		src: 'yes-alt'
 	},
+	supports: {
+		html: false,
+	},
 	attributes: {
 		completeMsg: {
 			type: 'boolean',
