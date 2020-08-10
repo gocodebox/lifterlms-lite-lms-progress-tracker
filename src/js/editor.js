@@ -1,8 +1,6 @@
 /**
  * Main editor script
  *
- * @package LifterLMS/LMS_Lite/scripts
- *
  * @since [version]
  * @version [version]
  */

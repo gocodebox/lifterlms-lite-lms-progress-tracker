@@ -1,8 +1,6 @@
 /**
  * Main client script
  *
- * @package LifterLMS/LMS_Lite/scripts
- *
  * @since [version]
  * @version [version]
  */
