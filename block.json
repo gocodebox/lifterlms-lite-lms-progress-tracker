@@ -5,7 +5,7 @@
   "icon": "yes-alt",
   "description": "A simple way to turn any WordPress post or page into a completable course.",
   "keywords": [ "course", "membership", "tracking", "progress", "complete", "LifterLMS", "LMS" ],
-  "textdomain": "lifterlms-lite-lms",
+  "textdomain": "llms-lite-progress",
   "attributes": {
     "completeMsg": {
       "type": "boolean",

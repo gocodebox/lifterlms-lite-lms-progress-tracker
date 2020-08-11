@@ -29,5 +29,27 @@
     "fix-cs": "\"vendor/bin/phpcbf\"",
     "post-install-cmd": "composer config-cs",
     "post-update-cmd": "composer config-cs"
+  },
+  "archive": {
+    "exclude": [
+      ".*",
+      "*.lock",
+      "*.xml",
+      "*.xml.dist",
+      "*.config.js",
+
+      "CHANGELOG.md",
+      "composer.json",
+      "docker-compose.yml",
+      "package.json",
+      "package-lock.json",
+      "README.md",
+
+      "node_modules",
+      "src",
+      "tests",
+      "tmp",
+      "vendor"
+    ]
   }
 }

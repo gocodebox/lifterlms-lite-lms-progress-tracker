@@ -3,7 +3,7 @@
  *
  * The index equates to the order of the child block.
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return {string[]} List of class names.
  */

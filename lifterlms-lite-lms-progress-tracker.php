@@ -4,16 +4,16 @@
  *
  * @package LifterLMS_Lite_LMS/Main
  *
- * @since [version]
- * @version [version]
+ * @since 0.0.1
+ * @version 0.0.1
  *
  * Plugin Name: Lite LMS Progress Tracker by LifterLMS
- * Plugin URI: https://lifterlms.com/
+ * Plugin URI: https://github.com/gocodebox/lifterlms-lite-lms-progress-tracker
  * Description: Easily track progress through simple online courses and other types of public or membership-protected content on your WordPress website.
- * Version: [version]
+ * Version: 0.0.1
  * Author: LifterLMS
  * Author URI: https://lifterlms.com/
- * Text Domain: lifterlms-lite-lms
+ * Text Domain: llms-lite-progress
  * Domain Path: /languages
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Initialize
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return void
  */
@@ -51,7 +51,7 @@ add_action( 'init', 'llms_lite_lms' );
 /**
  * Register & Enqueue scripts.
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return void
  */
@@ -81,7 +81,7 @@ function llms_lite_lms_scripts() {
 
 	// JS translations.
 	if ( 'editor' === $slug ) {
-		wp_set_script_translations( $handle, 'lifterlms-lite-lms' );
+		wp_set_script_translations( $handle, 'llms-lite-progress' );
 	}
 
 }
@@ -89,7 +89,7 @@ function llms_lite_lms_scripts() {
 /**
  * Load textdomain
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return void
  */
@@ -97,8 +97,8 @@ function llms_lite_lms_i18n() {
 
 	$locale = apply_filters( 'plugin_locale', determine_locale(), 'lifterlms' );
 
-	unload_textdomain( 'lifterlms-lite-lms' );
-	load_textdomain( 'lifterlms-lite-lms', WP_LANG_DIR . '/lifterlms/lifterlms-' . $locale . '.mo' );
+	unload_textdomain( 'llms-lite-progress' );
+	load_textdomain( 'llms-lite-progress', WP_LANG_DIR . '/lifterlms/lifterlms-' . $locale . '.mo' );
 	load_plugin_textdomain( 'lifterlms', false, dirname( plugin_basename( __FILE__ ) ) . '/i18n' );
 
 }
