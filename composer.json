@@ -24,7 +24,7 @@
     ],
     "env": "vendor/bin/llms-env",
     "env:setup": [
-      "vendor/bin/llms-env wp plugin activate lifterlms-lite-progress-tracker"
+      "vendor/bin/llms-env wp plugin activate lifterlms-lite-lms-progress-tracker"
     ],
     "fix-cs": "\"vendor/bin/phpcbf\"",
     "post-install-cmd": "composer config-cs",

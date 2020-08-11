@@ -1,0 +1,95 @@
+os: linux
+dist: bionic
+language: php
+
+addons:
+  artifacts:
+    paths:
+      - ./tmp/e2e-screenshots
+
+services:
+  - xvfb
+  - mysql
+  - docker
+
+cache:
+  directories:
+    - node_modules
+    - vendor
+    - $HOME/.composer/cache
+
+env:
+  - WP_VERSION=latest # 5.5
+  - WP_VERSION="5.4"
+  - WP_VERSION=nightly
+
+php:
+  - 7.4
+  - 7.3
+  - 7.2
+
+jobs:
+  fast_finish: true
+  allow_failures:
+  - env: WP_VERSION=nightly
+  include:
+  - name: "eslint"
+    language: node_js
+    node_js: lts/*
+    install:
+      - npm ci
+    script:
+      - npm run lint:js
+    after_script:
+  - name: "phpcs"
+    php: 7.4
+    install:
+      - composer install
+    script:
+      - composer run check-cs-errors
+    after_script:
+
+before_install:
+  # Disable xDebug for faster builds
+  - |
+    if [ "1" != $RUN_CODE_COVERAGE ] && [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
+      phpenv config-rm xdebug.ini
+    fi
+  # Raise PHP memory limit to 2048MB
+  - echo 'memory_limit = 2048M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+
+install:
+  # Install composer deps.
+  - composer install
+  # Upgrade docker-compose.
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/1.25.0/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  # Setup and Install Node.
+  - nvm install --lts
+  - node -v
+  - npm -v
+  - npm ci
+  # Build static assets.
+  - npm run build:scripts
+  # Start the Environment.
+  - composer run env up
+  # Setup Environment.
+  - composer run env:setup
+  # Upgrade/Downgrade WP Core where appropriate.
+  - |
+    if [ "latest" != $WP_VERSION ]; then
+      ./vendor/bin/llms-env wp core update --version=$WP_VERSION --force
+      ./vendor/bin/llms-env wp core update-db
+    fi;
+  - ./vendor/bin/llms-env wp core version
+
+script:
+  - npm run test
+
+after_script:
+  - ./vendor/bin/llms-env down
+
+notifications:
+  slack: teamcodebox:sElRyKa68sclyx37SW2aH0N9
