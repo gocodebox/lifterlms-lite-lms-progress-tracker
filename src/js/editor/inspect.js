@@ -9,7 +9,7 @@ import {
  * Inspector controls for use in the block editor
  *
  * @since 0.0.1
- * @since [version] Add unique className properties to each toggle.
+ * @since 0.0.1 Add unique className properties to each toggle.
  *
  * @param {Object}   options               Initial block parameters.
  * @param {Object}   options.attributes    Block attributes.

@@ -1,8 +1,8 @@
 /**
  * Run tests on all the possible actions available for the block.
  *
- * @since [version]
- * @version [version]
+ * @since 0.0.1
+ * @version 0.0.1
  */
 
 import {
@@ -21,7 +21,7 @@ import {
 /**
  * Utility to run expectations on the visibility of the various elements created by the block.
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @param {string} incompleteMsg Expected css `display` value of the element.
  * @param {string} incompleteBtn Expected css `display` value of the element.
@@ -41,7 +41,7 @@ async function doVisibilityTests( incompleteMsg, incompleteBtn, completeMsg, com
 /**
  * Open the block inspector for the tested block
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return {void}
  */
@@ -54,7 +54,7 @@ async function openBlockInspector() {
 /**
  * Updates the post and navigates to the frontend of the site.
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @return {void}
  */

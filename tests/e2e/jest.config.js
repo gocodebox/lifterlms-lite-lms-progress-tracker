@@ -1,7 +1,7 @@
 /**
  * Jest Config
  *
- * @since [version]
+ * @since 0.0.1
  *
  * @type {Object}
  */
