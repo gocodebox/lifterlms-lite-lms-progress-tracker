@@ -74,8 +74,8 @@ describe( 'Editor', () => {
 
 		await insertBlock( 'Lite LMS Progress Tracker' );
 
-		await fillField( '.wp-block-paragraph.llms-lite-lms-msg--incomplete', 'Incomplete' );
-		await fillField( '.wp-block-paragraph.llms-lite-lms-msg--complete', 'Complete' );
+		await fillField( 'p.llms-lite-lms-msg--incomplete', 'Incomplete' );
+		await fillField( 'p.llms-lite-lms-msg--complete', 'Complete' );
 
 		await savePostAndVisitFrontend();
 
