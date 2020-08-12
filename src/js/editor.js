@@ -41,6 +41,6 @@ registerBlockType( 'llms-lite-lms/progress-tracker', {
 				...block.attributes,
 			},
 			save: saveDeprecated,
-		}
+		},
 	],
 } );
