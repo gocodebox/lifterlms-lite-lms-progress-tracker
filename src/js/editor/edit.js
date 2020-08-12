@@ -1,58 +1,25 @@
+// Internal deps.
+import Inspector from './inspect';
+import getClassNames from './get-class-names';
+
+// External deps.
 import { __ } from '@wordpress/i18n';
 import { InnerBlocks } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import { select } from '@wordpress/data';
 
-import Inspector from './inspect';
-import getClassNames from './get-class-names';
-
 /**
- * Edit function for the block
+ * Get a list of classnames for the block
  *
- * @since 0.0.1
+ * @since [version]
  *
- * @param {Object}   options               Initial block parameters.
- * @param {string}   options.className     Block CSS classname.
- * @param {Object}   options.attributes    Block attributes.
- * @param {Function} options.setAttributes Function used to set block attributes.
- * @return {Object} The edit component.
+ * @param {string} className  Initial classname.
+ * @param {Object} attributes Block attributes.
+ * @return {string} Updated classnames.
  */
-export default function( { className, attributes, setAttributes } ) {
-	const
-		classes = getClassNames(),
-		{ allowReset, incompleteMsg, completeMsg } = attributes,
-		template = [
-			[
-				'core/paragraph',
-				{
-					className: classes[ 0 ],
-					placeholder: __( 'Enter a message to display when this item is incomplete.', 'llms-lite-progress' ),
-				},
-			],
-			[
-				'core/button',
-				{
-					align: 'center',
-					className: classes[ 1 ],
-					text: __( 'Mark Complete', 'llms-lite-progress' ),
-				},
-			],
-			[
-				'core/paragraph',
-				{
-					className: classes[ 2 ],
-					placeholder: __( 'Enter a message to display when this item is complete.', 'llms-lite-progress' ),
-				},
-			],
-			[
-				'core/button',
-				{
-					align: 'center',
-					className: `${ classes[ 3 ] } is-style-outline`,
-					text: __( 'Mark Incomplete', 'llms-lite-progress' ),
-				},
-			],
-		];
+function getBlockClassName( className, attributes ) {
+
+	const { allowReset, incompleteMsg, completeMsg } = attributes;
 
 	if ( allowReset ) {
 		className += ' has-incomplete-btn';
@@ -61,9 +28,74 @@ export default function( { className, attributes, setAttributes } ) {
 	if ( incompleteMsg ) {
 		className += ' has-incomplete-msg';
 	}
+
 	if ( completeMsg ) {
 		className += ' has-complete-msg';
 	}
+
+	return className;
+
+}
+
+/**
+ * Retrieve the inner block template
+ *
+ * @since [version]
+ *
+ * @return {Array[]} Array of block arrays.
+ */
+function getTemplate() {
+
+	const classes = getClassNames();
+
+	return [
+		[
+			'core/paragraph',
+			{
+				className: classes[ 0 ],
+				placeholder: __( 'Enter a message to display when this item is incomplete.', 'llms-lite-progress' ),
+			},
+		],
+		[
+			'core/button',
+			{
+				align: 'center',
+				className: classes[ 1 ],
+				text: __( 'Mark Complete', 'llms-lite-progress' ),
+			},
+		],
+		[
+			'core/paragraph',
+			{
+				className: classes[ 2 ],
+				placeholder: __( 'Enter a message to display when this item is complete.', 'llms-lite-progress' ),
+			},
+		],
+		[
+			'core/button',
+			{
+				align: 'center',
+				className: `${ classes[ 3 ] } is-style-outline`,
+				text: __( 'Mark Incomplete', 'llms-lite-progress' ),
+			},
+		],
+	];
+
+}
+
+/**
+ * Edit function for the block
+ *
+ * @since 0.0.1
+ * @since [version] Refactored for reduced complexity.
+ *
+ * @param {Object}   options               Initial block parameters.
+ * @param {string}   options.className     Block CSS classname.
+ * @param {Object}   options.attributes    Block attributes.
+ * @param {Function} options.setAttributes Function used to set block attributes.
+ * @return {Object} The edit component.
+ */
+export default function( { className, attributes, setAttributes } ) {
 
 	const postId = select( 'core/editor' ).getCurrentPostId();
 	if ( postId && ( ! attributes.postId || attributes.postId !== postId ) ) {
@@ -76,9 +108,9 @@ export default function( { className, attributes, setAttributes } ) {
 				attributes={ attributes }
 				setAttributes={ setAttributes }
 			/>
-			<div className={ className }>
+			<div className={ getBlockClassName( className, attributes ) }>
 				<InnerBlocks
-					template={ template }
+					template={ getTemplate() }
 					templateLock="all"
 				/>
 			</div>
