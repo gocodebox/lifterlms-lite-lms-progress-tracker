@@ -1,8 +1,11 @@
 @import "_shared";
 
 .wp-block-llms-lite-lms-progress-tracker {
-
 	position: relative;
+
+	.llms-lite-lms-progress-tracker--inner-wrap {
+		@include clearfix();
+	}
 
 	&::before {
 		background: rgba(250, 250, 250, 0.8);

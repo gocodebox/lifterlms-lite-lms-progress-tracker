@@ -1,6 +1,8 @@
-import { InnerBlocks } from '@wordpress/block-editor';
-
+// Internal Deps.
 import getClassNames from './get-class-names';
+
+// Extenral Deps.
+import { InnerBlocks } from '@wordpress/block-editor';
 
 /**
  * Retrieve the classname for the bock based on current attributes
@@ -10,7 +12,7 @@ import getClassNames from './get-class-names';
  * @param {Object} attributes Block attributes.
  * @return {string} Classname list.
  */
-function getBlockClassName( attributes ) {
+export function getBlockClassName( attributes ) {
 	const { allowReset, incompleteMsg, completeMsg } = attributes;
 
 	const classNames = [];
@@ -28,9 +30,31 @@ function getBlockClassName( attributes ) {
 }
 
 /**
+ * Ensure that the required classnames are present on all innerBlocks
+ *
+ * @since [version]
+ *
+ * @param {Object[]} innerBlocks List of inner block objects.
+ * @return {Object[]} Inner blocks list.
+ */
+export function ensureInnerBlockClassNames( innerBlocks ) {
+
+	const classes = getClassNames();
+	innerBlocks.forEach( ( innerBlock, index ) => {
+		if ( ! innerBlock.attributes.className.includes( classes[ index ] ) ) {
+			innerBlocks[ index ].attributes.className = innerBlock.attributes.className ? ` ${ classes[ index ] }` : classes[ index ];
+		}
+	} );
+
+	return innerBlocks;
+}
+
+/**
  * Save function for the block
  *
  * @since 0.0.1
+ * @since [version] Moved `ensureInnerBlockClassNames()` to it's own function.
+ *              Added an inner wrapper used to add a clearfix when buttons are aligned left or right.
  *
  * @param {Object}   options             Block params.
  * @param {Object}   options.attributes  Block attributes.
@@ -38,15 +62,16 @@ function getBlockClassName( attributes ) {
  * @return {string} HTML string to save to the post content.
  */
 export default function( { attributes, innerBlocks } ) {
-	// Ensure that our "required" classes are not removed by a smart developer
-	if ( innerBlocks.length ) {
-		const classes = getClassNames();
-		innerBlocks.forEach( ( innerBlock, index ) => {
-			if ( ! innerBlock.attributes.className.includes( classes[ index ] ) ) {
-				innerBlocks[ index ].attributes.className = innerBlock.attributes.className ? ` ${ classes[ index ] }` : classes[ index ];
-			}
-		} );
+
+	if ( innerBlocks && innerBlocks.length ) {
+		innerBlocks = ensureInnerBlockClassNames( innerBlocks );
 	}
 
-	return ( <div className={ getBlockClassName( attributes ) } data-post-id={ attributes.postId }><InnerBlocks.Content /></div> );
+	return (
+		<div className={ getBlockClassName( attributes ) } data-post-id={ attributes.postId }>
+			<div className="llms-lite-lms-progress-tracker--inner-wrap">
+				<InnerBlocks.Content />
+			</div>
+		</div>
+	);
 }
