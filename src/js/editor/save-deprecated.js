@@ -18,11 +18,9 @@ import { InnerBlocks } from '@wordpress/block-editor';
  * @return {string} HTML string to save to the post content.
  */
 export default function( { attributes, innerBlocks } ) {
-
 	if ( innerBlocks && innerBlocks.length ) {
 		innerBlocks = ensureInnerBlockClassNames( innerBlocks );
 	}
 
 	return ( <div className={ getBlockClassName( attributes ) } data-post-id={ attributes.postId }><InnerBlocks.Content /></div> );
-
 }

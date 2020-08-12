@@ -38,7 +38,6 @@ export function getBlockClassName( attributes ) {
  * @return {Object[]} Inner blocks list.
  */
 export function ensureInnerBlockClassNames( innerBlocks ) {
-
 	const classes = getClassNames();
 	innerBlocks.forEach( ( innerBlock, index ) => {
 		if ( ! innerBlock.attributes.className.includes( classes[ index ] ) ) {
@@ -62,7 +61,6 @@ export function ensureInnerBlockClassNames( innerBlocks ) {
  * @return {string} HTML string to save to the post content.
  */
 export default function( { attributes, innerBlocks } ) {
-
 	if ( innerBlocks && innerBlocks.length ) {
 		innerBlocks = ensureInnerBlockClassNames( innerBlocks );
 	}
