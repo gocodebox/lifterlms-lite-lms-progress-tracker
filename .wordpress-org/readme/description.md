@@ -28,8 +28,8 @@ Think of it as a lightweight Learning Management System (LMS) for a website proj
 + [Knowledge Base][knowledge]
 
 # **Optional Advanced Integrations**
-Lite LMS Progress Tracker is made by [LifterLMS][home]. If you choose to also use Lite LMS Progress Tracker with the [free open source LifterLMS plugin][core], you will soon see some additional benefits:
-+ Lite LMS Progress Tracker User tracking data added to the LifterLMS reporting area (coming soon)
+Lite LMS Progress Tracker is made by [LifterLMS][home]. If you choose to also use Lite LMS Progress Tracker with the **[free open source LifterLMS plugin][core]**, you will soon see some additional benefits:
++ Lite LMS Progress Tracker user tracking data added to the LifterLMS reporting area (coming soon)
 
 
 [home]: https://lifterlms.com/?utm_source=Lite%20LMS%20Progress%20Tracker%Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale
