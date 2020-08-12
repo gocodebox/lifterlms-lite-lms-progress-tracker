@@ -1,4 +1,4 @@
-=== Lite LMS Progress Tracker by LifterLMS - Simple Course, Membership Site & Content Progress Tracking for WordPress ===
+=== Lite LMS Progress Tracker by LifterLMS - Simple Course, Membership Site and Content Progress Tracking for WordPress ===
 Contributors: thomasplevy, chrisbadgett, d4z_c0nf, lifterlms, codeboxllc
 Donate link: https://lifterlms.com
 Tags: block, course, progress tracking, lessons, elearning, membership, learning management system
