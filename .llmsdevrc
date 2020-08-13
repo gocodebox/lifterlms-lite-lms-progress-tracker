@@ -9,7 +9,7 @@
 			"Requires PHP": "7.2"
 		},
 		"changelog": {
-			"link": "https://make.lifterlms.com/tag/lifterlms/"
+			"link": "https://make.lifterlms.com/tag/lifterlms-lite-lms-progress-tracker/"
 		},
 		"sections": {
 			"Description": "file:./.wordpress-org/readme/description.md"
