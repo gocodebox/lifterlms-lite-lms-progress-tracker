@@ -1,4 +1,23 @@
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
 .wp-block-llms-lite-lms-progress-tracker {
+
+	.llms-lite-lms-msg--incomplete,
+	.llms-lite-lms-msg--complete,
+	.llms-lite-lms-btn--incomplete,
+	.llms-lite-lms-btn--complete {
+		clear: both;
+	}
 
 	// Hide the message paragraph blocks.
 	p.llms-lite-lms-msg--incomplete,
