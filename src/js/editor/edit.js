@@ -18,7 +18,6 @@ import { select } from '@wordpress/data';
  * @return {string} Updated classnames.
  */
 function getBlockClassName( className, attributes ) {
-
 	const { allowReset, incompleteMsg, completeMsg } = attributes;
 
 	if ( allowReset ) {
@@ -34,7 +33,6 @@ function getBlockClassName( className, attributes ) {
 	}
 
 	return className;
-
 }
 
 /**
@@ -45,7 +43,6 @@ function getBlockClassName( className, attributes ) {
  * @return {Array[]} Array of block arrays.
  */
 function getTemplate() {
-
 	const classes = getClassNames();
 
 	return [
@@ -80,7 +77,6 @@ function getTemplate() {
 			},
 		],
 	];
-
 }
 
 /**
@@ -96,7 +92,6 @@ function getTemplate() {
  * @return {Object} The edit component.
  */
 export default function( { className, attributes, setAttributes } ) {
-
 	const postId = select( 'core/editor' ).getCurrentPostId();
 	if ( postId && ( ! attributes.postId || attributes.postId !== postId ) ) {
 		setAttributes( { postId } );
