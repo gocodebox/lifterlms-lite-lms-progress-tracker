@@ -3,6 +3,8 @@
 .wp-block-llms-lite-lms-progress-tracker {
 
 	position: relative;
+	clear: both;
+	overflow: hidden;
 
 	&::before {
 		background: rgba(250, 250, 250, 0.8);
