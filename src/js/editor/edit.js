@@ -11,7 +11,7 @@ import { select } from '@wordpress/data';
 /**
  * Get a list of classnames for the block
  *
- * @since [version]
+ * @since 0.0.2
  *
  * @param {string} className  Initial classname.
  * @param {Object} attributes Block attributes.
@@ -38,7 +38,7 @@ function getBlockClassName( className, attributes ) {
 /**
  * Retrieve the inner block template
  *
- * @since [version]
+ * @since 0.0.2
  *
  * @return {Array[]} Array of block arrays.
  */
@@ -83,7 +83,7 @@ function getTemplate() {
  * Edit function for the block
  *
  * @since 0.0.1
- * @since [version] Refactored for reduced complexity.
+ * @since 0.0.2 Refactored for reduced complexity.
  *
  * @param {Object}   options               Initial block parameters.
  * @param {string}   options.className     Block CSS classname.
