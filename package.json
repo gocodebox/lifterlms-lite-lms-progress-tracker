@@ -1,6 +1,6 @@
 {
   "name": "lifterlms-lite-lms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easily track progress through simple online courses and other types of content on your WordPress website.",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "@wordpress/scripts": "^12.1.1"
   },
   "scripts": {
-    "build": "npm run build:scripts && npm run build:pot",
+    "build": "npm run build:scripts && npm run build:pot && llms-dev readme",
     "build:scripts": "wp-scripts build",
     "build:pot": "llms-dev pot --text-domain=llms-lite-progress --json",
     "fix:js": "npm run lint:js -- --fix",
