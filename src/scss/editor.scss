@@ -1,5 +1,9 @@
 @import "_shared";
 
+.wp-block[data-type="llms-lite-lms/progress-tracker"] {
+	clear: both;
+	overflow: hidden;
+}
 .wp-block-llms-lite-lms-progress-tracker {
 
 	.block-editor-block-list__layout {

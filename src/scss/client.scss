@@ -2,6 +2,8 @@
 
 .wp-block-llms-lite-lms-progress-tracker {
 	position: relative;
+	clear: both;
+	overflow: hidden;
 
 	.llms-lite-lms-progress-tracker--inner-wrap {
 		@include clearfix();
