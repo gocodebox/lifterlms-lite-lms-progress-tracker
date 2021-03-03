@@ -2,7 +2,7 @@
  * Main editor script
  *
  * @since 0.0.1
- * @version [version]
+ * @version 0.0.2
  */
 
 // Styles.
@@ -25,7 +25,7 @@ const { icon } = block;
  * Register the block.
  *
  * @since 0.0.1
- * @since [version] Added deprecatation of version 0.0.1.
+ * @since 0.0.2 Added deprecation of version 0.0.1.
  */
 registerBlockType( 'llms-lite-lms/progress-tracker', {
 	...block,
