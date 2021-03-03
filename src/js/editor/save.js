@@ -32,7 +32,7 @@ export function getBlockClassName( attributes ) {
 /**
  * Ensure that the required classnames are present on all innerBlocks
  *
- * @since [version]
+ * @since 0.0.2
  *
  * @param {Object[]} innerBlocks List of inner block objects.
  * @return {Object[]} Inner blocks list.

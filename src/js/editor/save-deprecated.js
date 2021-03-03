@@ -10,7 +10,7 @@ import { InnerBlocks } from '@wordpress/block-editor';
  * This save function does not contain an inner mask.
  *
  * @since 0.0.1
- * @deprecated [version]
+ * @deprecated 0.0.2
  *
  * @param {Object}   options             Block params.
  * @param {Object}   options.attributes  Block attributes.
