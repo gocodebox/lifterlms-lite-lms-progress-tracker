@@ -10,6 +10,8 @@ jobs:
   - env: WP_VERSION="5.4"
   - env: WP_VERSION="5.3"
   - env: WP_VERSION="5.2"
+  - env: WP_VERSION=nightly
+  - env: WP_VERSION=latest RUN_CODE_COVERAGE=1
 
   include:
   - env: ESLINT=1
@@ -20,3 +22,9 @@ jobs:
     script:
       - npm run lint:js
     after_script:
+  - php: "8.0"
+    env: WP_VERSION=5.6 LLMS_TRAVIS_TESTS=E2E
+  - php: "7.4"
+    env: WP_VERSION=5.5 LLMS_TRAVIS_TESTS=E2E
+  - php: "7.4"
+    env: WP_VERSION=5.4 LLMS_TRAVIS_TESTS=E2E
