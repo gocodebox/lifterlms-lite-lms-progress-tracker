@@ -17,6 +17,7 @@ jobs:
   - env: ESLINT=1
     language: node_js
     node_js: lts/*
+    before_install:
     install:
       - npm ci
     script:
