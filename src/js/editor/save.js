@@ -52,7 +52,7 @@ export function ensureInnerBlockClassNames( innerBlocks ) {
  * Save function for the block
  *
  * @since 0.0.1
- * @since [version] Moved `ensureInnerBlockClassNames()` to it's own function.
+ * @since 0.0.2 Moved `ensureInnerBlockClassNames()` to it's own function.
  *              Added an inner wrapper used to add a clearfix when buttons are aligned left or right.
  *
  * @param {Object}   options             Block params.
