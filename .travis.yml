@@ -2,45 +2,17 @@ import:
   - gocodebox/lifterlms:.config/travis/main.yml
   - gocodebox/lifterlms:.config/travis/e2e.yml
 
-php:
-  - "8.0"
-  - "7.4"
-  - "7.3"
-  - "7.2"
-
 jobs:
   exclude:
-  - php: "8.0"
-    env: WP_VERSION=latest
-  - php: "8.0"
-    env: WP_VERSION="5.6"
-  - php: "7.4"
-    env: WP_VERSION=latest
-  - php: "7.4"
-    env: WP_VERSION="5.6"
-  - php: "7.4"
-    env: WP_VERSION="5.5"
-  - php: "7.4"
-    env: WP_VERSION="5.4"
-  - php: "7.3"
-    env: WP_VERSION=latest
-  - php: "7.3"
-    env: WP_VERSION="5.6"
-  - php: "7.3"
-    env: WP_VERSION="5.5"
-  - php: "7.3"
-    env: WP_VERSION="5.4"
-  - php: "7.2"
-    env: WP_VERSION=latest
-  - php: "7.2"
-    env: WP_VERSION="5.6"
-  - php: "7.2"
-    env: WP_VERSION="5.5"
-  - php: "7.2"
-    env: WP_VERSION="5.4"
+  - env: WP_VERSION=latest
+  - env: WP_VERSION="5.6"
+  - env: WP_VERSION="5.5"
+  - env: WP_VERSION="5.4"
+  - env: WP_VERSION="5.3"
+  - env: WP_VERSION="5.2"
 
   include:
-  - name: "eslint"
+  - env: ESLINT=1
     language: node_js
     node_js: lts/*
     install:
