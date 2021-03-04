@@ -66,7 +66,7 @@ Lite LMS Progress Tracker is made by [LifterLMS][home]. If you choose to also us
 
 == Changelog ==
 
-= v0.1.0 - 2021-03-03 =
+= v0.1.0 - 2021-03-04 =
 
 + Tested up to WordPress version 5.7
 
