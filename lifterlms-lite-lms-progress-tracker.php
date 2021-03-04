@@ -10,7 +10,7 @@
  * Plugin Name: Lite LMS Progress Tracker by LifterLMS
  * Plugin URI: https://github.com/gocodebox/lifterlms-lite-lms-progress-tracker
  * Description: Easily track progress through simple online courses and other types of public or membership-protected content on your WordPress website.
- * Version: 0.0.2
+ * Version: 0.1.0
  * Author: LifterLMS
  * Author URI: https://lifterlms.com/
  * Text Domain: llms-lite-progress
@@ -18,7 +18,7 @@
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Requires at least: 5.4
- * Tested up to: 5.5
+ * Tested up to: 5.7
  *
  * * * * * * * * * * * * * * * * * * * * * *
  *                                         *
