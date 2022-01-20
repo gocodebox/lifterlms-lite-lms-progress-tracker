@@ -6,6 +6,8 @@ You can even link the "Mark Complete" buttons anywhere you like to create learni
 
 Think of it as a lightweight Learning Management System (LMS) for a website project that isn't ready yet for all the advanced functionality in a full featured WordPress LMS plugin.
 
+https://www.youtube.com/watch?v=G6Q0Kw2RGqg
+
 # **Key Benefits**
 + Allow users to track their progress through your website content (even if they're not logged in)
 + Design learning paths through your website content
