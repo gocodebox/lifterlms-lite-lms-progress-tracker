@@ -72,5 +72,10 @@
     "tests": "\"vendor/bin/phpunit\"",
     "tests-run": "\"vendor/bin/phpunit\"",
     "install-php8": "composer install --ignore-platform-reqs"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }
