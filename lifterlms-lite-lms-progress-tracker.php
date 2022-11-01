@@ -5,7 +5,7 @@
  * @package LifterLMS_Lite_LMS/Main
  *
  * @since 0.0.1
- * @version 0.0.1
+ * @version [version]
  *
  * Plugin Name: Lite LMS Progress Tracker by LifterLMS
  * Plugin URI: https://github.com/gocodebox/lifterlms-lite-lms-progress-tracker
@@ -52,6 +52,7 @@ add_action( 'init', 'llms_lite_lms' );
  * Register & Enqueue scripts.
  *
  * @since 0.0.1
+ * @since [version] Only add `wp-edit-blocks` as a dependency of the editor styles.
  *
  * @return void
  */
@@ -75,7 +76,7 @@ function llms_lite_lms_scripts() {
 	wp_enqueue_style(
 		'llms-lite-editor',
 		$url . 'assets/css/llms-lite-' . $slug . '.css',
-		array( 'wp-edit-blocks' ),
+		'editor' === $slug ? array( 'wp-edit-blocks' ) : array(),
 		$asset['version']
 	);
 
