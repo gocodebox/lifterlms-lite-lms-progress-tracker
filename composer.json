@@ -9,6 +9,12 @@
           "email": "team@lifterlms.com"
       }
   ],
+  "config": {
+    "lock": false,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
   "archive": {
     "exclude": [
       ".*",
@@ -32,7 +38,9 @@
     ]
   },
   "minimum-stability": "dev",
-  "require": {},
+  "require": {
+    "php": "7.4.* || 8.0.* || 8.1.*"
+  },
   "require-dev": {
       "lifterlms/lifterlms-cs": "dev-trunk",
       "lifterlms/lifterlms-tests": "dev-trunk"
@@ -72,10 +80,5 @@
     "tests": "\"vendor/bin/phpunit\"",
     "tests-run": "\"vendor/bin/phpunit\"",
     "install-php8": "composer install --ignore-platform-reqs"
-  },
-  "config": {
-    "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
   }
 }
