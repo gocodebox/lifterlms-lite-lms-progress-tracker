@@ -1,6 +1,14 @@
 Lite LMS Changelog
 ==================
 
+v0.1.1 - 2022-11-02
+-------------------
+
+##### Bug Fixes
+
++ Only load  `wp-edit-blocks` styles in the admin editor. [#34](https://github.com/gocodebox/lifterlms-lite-lms-progress-tracker/issues/34)
+
+
 v0.1.0 - 2021-03-04
 -------------------
 

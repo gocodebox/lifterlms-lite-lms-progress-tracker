@@ -5,12 +5,12 @@
  * @package LifterLMS_Lite_LMS/Main
  *
  * @since 0.0.1
- * @version [version]
+ * @version 0.1.1
  *
  * Plugin Name: Lite LMS Progress Tracker by LifterLMS
  * Plugin URI: https://github.com/gocodebox/lifterlms-lite-lms-progress-tracker
  * Description: Easily track progress through simple online courses and other types of public or membership-protected content on your WordPress website.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: LifterLMS
  * Author URI: https://lifterlms.com/
  * Text Domain: llms-lite-progress
@@ -52,7 +52,7 @@ add_action( 'init', 'llms_lite_lms' );
  * Register & Enqueue scripts.
  *
  * @since 0.0.1
- * @since [version] Only add `wp-edit-blocks` as a dependency of the editor styles.
+ * @since 0.1.1 Only add `wp-edit-blocks` as a dependency of the editor styles.
  *
  * @return void
  */

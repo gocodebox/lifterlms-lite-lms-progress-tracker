@@ -5,9 +5,9 @@ Tags: block, course, progress tracking, lessons, elearning, membership, learning
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.4
-Tested up to: 5.7
-Requires PHP: 7.2
-Stable tag: 0.1.0
+Tested up to: 6.1
+Requires PHP: 7.3
+Stable tag: 0.1.1
 
 The easiest way to track progress through simple online courses and other types of content on your WordPress website.
 
@@ -65,6 +65,10 @@ Lite LMS Progress Tracker is made by [LifterLMS][home]. If you choose to also us
 
 
 == Changelog ==
+
+= v0.1.1 - 2021-03-04 =
+
++ Only load  `wp-edit-blocks` styles in the admin editor. [#34](https://github.com/gocodebox/lifterlms-lite-lms-progress-tracker/issues/34)
 
 = v0.1.0 - 2021-03-04 =
 

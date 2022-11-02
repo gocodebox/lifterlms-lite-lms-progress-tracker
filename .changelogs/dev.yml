@@ -1,5 +1,0 @@
-significance: patch
-type: fixed
-links:
-  - "#34"
-entry: Only load  `wp-edit-blocks` styles in the admin editor.
