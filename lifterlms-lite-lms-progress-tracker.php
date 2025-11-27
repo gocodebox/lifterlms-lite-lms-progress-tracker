@@ -18,7 +18,7 @@
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Requires at least: 5.4
- * Tested up to: 6.8
+ * Tested up to: 6.9
  *
  * * * * * * * * * * * * * * * * * * * * * *
  *                                         *
@@ -58,7 +58,7 @@ add_action( 'init', 'llms_lite_lms' );
  */
 function llms_lite_lms_scripts() {
 
-	$dir    = dirname( __FILE__ );
+	$dir    = __DIR__;
 	$url    = plugin_dir_url( __FILE__ );
 	$slug   = is_admin() ? 'editor' : 'client';
 	$handle = sprintf( 'llms-lite-%s', $slug );
@@ -84,7 +84,6 @@ function llms_lite_lms_scripts() {
 	if ( 'editor' === $slug ) {
 		wp_set_script_translations( $handle, 'llms-lite-progress' );
 	}
-
 }
 
 /**
@@ -101,5 +100,4 @@ function llms_lite_lms_i18n() {
 	unload_textdomain( 'llms-lite-progress' );
 	load_textdomain( 'llms-lite-progress', WP_LANG_DIR . '/lifterlms/lifterlms-' . $locale . '.mo' );
 	load_plugin_textdomain( 'lifterlms', false, dirname( plugin_basename( __FILE__ ) ) . '/i18n' );
-
 }
